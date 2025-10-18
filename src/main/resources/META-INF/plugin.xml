@@ -6,10 +6,12 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.nadiatarashkevich.quickcrash.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.nadiatarashkevich.quickcrash.startup.MyProjectActivity" />
-    </extensions>
+    <actions>
+        <action id="com.github.nadiatarashkevich.quickcrash.actions.HelloWorldAction"
+                class="com.github.nadiatarashkevich.quickcrash.actions.HelloWorldAction"
+                text="Hello World"
+                description="Show Hello World dialog">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
